@@ -71,6 +71,8 @@
   ```
   Źródło: [getcomposer.org/download/](https://getcomposer.org/download/)
 
+  Instalcja composer.phar dla lokalnego użytkownika -> .bashrc
+
 9. Instalacja codeception.
 
 10. Instalacja phpunit.
