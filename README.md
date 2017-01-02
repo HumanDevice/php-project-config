@@ -145,7 +145,7 @@
 
 15. Instalcja selenium server standalone.
 
-  * W pierwszym kroku należy zainstalować Oracle Java.
+  1. Zainstaluj Oracle Java.
   ```
   sudo add-apt-repository ppa:webupd8team/java
   sudo apt update
@@ -154,9 +154,19 @@
     * Źródło: [launchpad.net/~webupd8team/+archive/ubuntu/java](https://launchpad.net/~webupd8team/+archive/ubuntu/java)
     * Źródło: [How to install Oracle Java on Ubuntu 14.04? [duplicate]](http://askubuntu.com/questions/521145/how-to-install-oracle-java-on-ubuntu-14-04)
 
-  * Drugim krokiem jest pobranie paczki JAR z poniższego linku:
+  2. krokiem jest pobranie paczki JAR z poniższego linku:
 
   [seleniumhq.org/download/](http://www.seleniumhq.org/download/)
+
+  3. Przenieś plik `selenium-server-standalone-x.x.x.jar` do katalogu `~/bin` i zmień jego nazwę na `selenium-server.jar`.
+  4. Upewnij się, że jesteś w katalogu `~/bin` i wykonaj poniższy kod:
+  ```
+    cat << EOF > selenium-server
+    #!/bin/bash
+    java -jar selenium-server.jar
+    EOF
+    chmod 755 selenium-server
+  ```
 
 16. Instalacja generatora ApiDoc.
 
