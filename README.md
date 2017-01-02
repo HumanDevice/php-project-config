@@ -2,8 +2,8 @@
 
 ## Spis treści
 
-1. [En]
-2. [Coding style](Style/)
+1. [Środowisko konfigurowanego systemu](#środowisko-konfigurowanego-systemu)
+2. [Konfiguracja środowisko](#konfiguracja-srodowiska)
 
 ## Środowisko konfigurowanego systemu
 
@@ -12,11 +12,12 @@
 3. MySQL Server 5.7
 4. PHP 7.
 
-## Środowisko
+## Konfiguracja środowiska
 
 ### Linux
 
 1. Wstępne konfiguracja systemu.
+
   * Dobrze, aby zainstalowana dystrybucja linuxa była pochodną Debiana.
   * Warto zadbać o zaszyfrowanie folderu domowego użytkownika.
 
