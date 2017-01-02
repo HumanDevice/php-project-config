@@ -139,6 +139,22 @@
   ```
   Żródło: [codeception.com/quickstart](http://codeception.com/quickstart)
 
+15. Instalcja selenium server standalone.
+
+  * W pierwszym kroku należy zainstalować Oracle Java.
+  ```
+  sudo add-apt-repository ppa:webupd8team/java
+  sudo apt update
+  sudo install oracle-java8-installer
+  ```
+    * Źródło: [launchpad.net/~webupd8team/+archive/ubuntu/java](https://launchpad.net/~webupd8team/+archive/ubuntu/java)
+    * Źródło: [How to install Oracle Java on Ubuntu 14.04? [duplicate]](http://askubuntu.com/questions/521145/how-to-install-oracle-java-on-ubuntu-14-04)
+
+  * Drugim krokiem jest pobranie paczki JAR z poniższego linku:
+
+  [seleniumhq.org/download/](http://www.seleniumhq.org/download/)
+
+
 ## Windows
 
 # Instalacja LAMP
