@@ -73,6 +73,10 @@
     * Zwiększenie pamięci operacyjnem dostępenej dla PHP: `memory_limit = 1024M`
     * Zwiększ maksymalną wielkość wysyłanych plików: `upload_max_filesize = 64M`
 
+7. Instalacja wtyczki do Xdebuga w przeglądarce.
+
+  * TODO
+
 7. Uruchomienie modułów apache.
 
   ```
@@ -154,6 +158,9 @@
 
   [seleniumhq.org/download/](http://www.seleniumhq.org/download/)
 
+16. Instalacja generatora ApiDoc.
+
+  * TODO
 
 ## Windows
 
