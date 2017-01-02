@@ -58,6 +58,14 @@
     sudo apt install mysql-server
   ```
 
+  Podczas instalacji mysql-server w konsoli pojawi się okienko konfiguracji hasła dla użytkownika root:
+
+    ![alt text](window_mysql_password.png)
+
+    i kolejno potwierdzenia tego hasła:
+
+    ![alt text](window_mysql_password_repeat.png).
+
   Aby zweryfikować poprawność instlacji wywołaj:
 
   ```
@@ -84,15 +92,6 @@
 
   Aby zamknąc konsole mysql wpisz: `exit`
 
-
-5. Podczas instalacji mysql-server w konsoli pojawi się okienko konfiguracji hasła dla użytkownika root:
-
-  ![alt text](window_mysql_password.png)
-
-  i kolejno potwierdzenia tego hasła:
-
-  ![alt text](window_mysql_password_repeat.png).
-
 5. Instalacja memcached.
 
   ```
@@ -106,7 +105,7 @@
 6. Instalacja PHP wraz z listą modułów.
 
   ```
-  sudo apt install php libapache2-mod-php php-cli php-mcrypt php-curl php-intl php-dom php-mysql php-mysqli php-mbstring php-xml php-simplexml php-gd php-xdebug php-memcached
+    sudo apt install php libapache2-mod-php php-cli php-mcrypt php-curl php-intl php-dom php-mysql php-mysqli php-mbstring php-xml php-simplexml php-gd php-xdebug php-memcached
   ```
 
 7. Zmiany w konfiguracji PHP.
@@ -117,7 +116,9 @@
     * Zwiększenie pamięci operacyjnem dostępenej dla PHP: `memory_limit = 1024M`
     * Zwiększ maksymalną wielkość wysyłanych plików: `upload_max_filesize = 64M`
 
+8. Skonfigurowanie katalogu `www` z uprawnieniami grupy `www-data` wewnątrz katalogu użytkownika.
 
+  * TODO
 
 7. Instalacja wtyczki do Xdebuga w przeglądarce.
 
@@ -235,6 +236,12 @@
 16. Instalacja generatora ApiDoc.
 
   * TODO
+
+17. Instalacja Postmana.
+
+  * TODO
+
+18. 
 
 ## Windows
 
