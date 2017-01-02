@@ -1,4 +1,4 @@
-# Konfiguracja środowiska projektu projektu
+# Konfiguracja środowiska projektu
 
 ## Spis treści
 
@@ -61,21 +61,47 @@
   sudo a2enmod rewrite
   ```
 
-8. Instalacja composera.
+8. Przygotuj folder w katalogu domowym użytkownika, zostanie on dodany do zmiennych środowiskowych użytkownnika. A w nim zostaną zainstalowane aplikacje composer oraz webdriver.
+  * W moim przypadku jest to katalog `~/bin`
+  * Jeśli masz już przygotowany katalog, otwórz plik ``~/.profile` i dodaj na końcu poniższy kod:
+  ```
+  # set PATH so it includes user's private bin if it exists
+  if [ -d "$HOME/bin" ] ; then
+  	PATH="$HOME/bin:$PATH"
+  fi
+  ```
 
+9. Przejdź do przygotowanego katalogu.
+
+  ```
+  cd ~/bin
+  ```
+
+10. Instalacja composera.
+
+  * Wykonaj poniższy kod w terminalu. W razie zmiany hashu potwierdzającego oryginalność paczki skorzystaj z kodu dostępnego w źródle.
   ```
   php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
   php -r "if (hash_file('SHA384', 'composer-setup.php') === '61069fe8c6436a4468d0371454cf38a812e451a14ab1691543f25a9627b97ff96d8753d92a00654c21e2212a5ae1ff36') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"
-  php composer-setup.php`
+  php composer-setup.php
   php -r "unlink('composer-setup.php');"
+  mv composer.phar composer
   ```
   Źródło: [getcomposer.org/download/](https://getcomposer.org/download/)
 
-  Instalcja composer.phar dla lokalnego użytkownika -> .bashrc
+9. Dodanie aplikacji globalnych użytkownika zainstalowanych w kompoterze do listy ścieżek systemowych.
+  * Otwórz plik `~/.profile`
+  * Dodaj na końcu poniższy kod:
+  ```
+  # set PATH so it includes user's private composer bin if it exists
+  if [ -d "$HOME/.composer/vendor/bin" ] ; then
+      PATH="$HOME/.composer/vendor/bin:$PATH"
+  fi
+  ```
 
-9. Instalacja codeception.
+11. Instalacja codeception.
 
-10. Instalacja phpunit.
+12. Instalacja phpunit.
 
 ## Windows
 
