@@ -25,15 +25,21 @@
 
 2. Aktualizacja repozytoriów.
 
-  `sudo apt update`
+  ```
+  sudo apt update
+  ```
 
 3. Instalacja serwera HTTP Apache.
 
-  `sudo apt install apache2`
+  ```
+  sudo apt install apache2
+  ```
 
 4. Instalacja serwera baz danych MySQL.
 
-  `sudo apt install mysql-server php-mysql`
+  ```
+  sudo apt install mysql-server
+  ```
 
 5. Podczas instalacji mysql-server w konsoli pojawi się okienko konfiguracji hasła dla użytkownika root:
 
@@ -45,13 +51,25 @@
 
 6. Instalacja PHP wraz z listą modułów.
 
-  `sudo apt install php libapache2-mod-php php-cli php-mcrypt php-curl php-intl php-dom php-mysql php-mysqli php-mbstring php-xml php-simplexml php-gd php-xdebug`
+  ```
+  sudo apt install php libapache2-mod-php php-cli php-mcrypt php-curl php-intl php-dom php-mysql php-mysqli php-mbstring php-xml php-simplexml php-gd php-xdebug
+  ```
 
 7. Uruchomienie modułów apache.
 
-  `sudo a2enmod rewrite`
+  ```
+  sudo a2enmod rewrite
+  ```
 
 8. Instalacja composera.
+
+  ```
+  php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
+  php -r "if (hash_file('SHA384', 'composer-setup.php') === '61069fe8c6436a4468d0371454cf38a812e451a14ab1691543f25a9627b97ff96d8753d92a00654c21e2212a5ae1ff36') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"
+  php composer-setup.php`
+  php -r "unlink('composer-setup.php');"
+  ```
+  Źródło: [getcomposer.org/download/](https://getcomposer.org/download/)
 
 9. Instalacja codeception.
 
