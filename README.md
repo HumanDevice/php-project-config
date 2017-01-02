@@ -125,6 +125,10 @@
     chgrp www-data www
   ```
 
+  * TODO
+
+9. Ustawienie
+
 7. Instalacja wtyczki do Xdebuga w przeglądarce.
 
   Zainstaluj rozszerzenie do chroma z poniższego linku.
