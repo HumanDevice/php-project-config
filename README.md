@@ -30,13 +30,13 @@
 2. Aktualizacja repozytoriów.
 
   ```
-  sudo apt update
+    sudo apt update
   ```
 
 3. Instalacja serwera HTTP Apache.
 
   ```
-  sudo apt install apache2
+    sudo apt install apache2
   ```
 
   Aby zweryfikować poprawność instlacji wywołaj:
@@ -55,20 +55,35 @@
 4. Instalacja serwera baz danych MySQL.
 
   ```
-  sudo apt install mysql-server
+    sudo apt install mysql-server
   ```
 
   Aby zweryfikować poprawność instlacji wywołaj:
 
   ```
-
+    mysql -u root -p
   ```
 
-5. Instalacja memcached.
+  I wprowadź swoje hasło, powinna pojawić się analogiczna treśc z uruchomiona konsolą `mysql>`
 
   ```
-  sudo apt install memcached
+    Welcome to the MySQL monitor.  Commands end with ; or \g.
+    Your MySQL connection id is 13
+    Server version: 5.7.16-0ubuntu0.16.04.1 (Ubuntu)
+
+    Copyright (c) 2000, 2016, Oracle and/or its affiliates. All rights reserved.
+
+    Oracle is a registered trademark of Oracle Corporation and/or its
+    affiliates. Other names may be trademarks of their respective
+    owners.
+
+    Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+    mysql>
   ```
+
+  Aby zamknąc konsole mysql wpisz: `exit`
+
 
 5. Podczas instalacji mysql-server w konsoli pojawi się okienko konfiguracji hasła dla użytkownika root:
 
@@ -78,6 +93,16 @@
 
   ![alt text](window_mysql_password_repeat.png).
 
+5. Instalacja memcached.
+
+  ```
+    sudo apt install memcached
+  ```
+
+  Źródło: [How To Install and Use Memcache on Ubuntu 14.04](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-memcache-on-ubuntu-14-04)
+
+  Weryfikacja instalacja nastąpi podczas weryfikacji instalacji PHP.
+
 6. Instalacja PHP wraz z listą modułów.
 
   ```
@@ -86,11 +111,13 @@
 
 7. Zmiany w konfiguracji PHP.
 
-  * Otwórz plik: `/etc/php/7.0/apache2/php.ini`
-  * Zmienić poniższe linijki:
+  1. Otwórz plik: `/etc/php/7.0/apache2/php.ini`
+  2. Zmienić poniższe linijki:
     * Na serwerze produkcyjnym ustawić: `expose_php = Off`
     * Zwiększenie pamięci operacyjnem dostępenej dla PHP: `memory_limit = 1024M`
     * Zwiększ maksymalną wielkość wysyłanych plików: `upload_max_filesize = 64M`
+
+
 
 7. Instalacja wtyczki do Xdebuga w przeglądarce.
 
@@ -198,6 +225,12 @@
   [sites.google.com/a/chromium.org/chromedriver/downloads](https://sites.google.com/a/chromium.org/chromedriver/downloads)
 
   Źródło: [github.com/SeleniumHQ/selenium/wiki/ChromeDriver](https://github.com/SeleniumHQ/selenium/wiki/ChromeDriver)
+
+  3. Nastepnie użyj poniższych poleceń:
+  ```
+    chmod 755 chromedriver
+    source ~/.profile
+  ```
 
 16. Instalacja generatora ApiDoc.
 
