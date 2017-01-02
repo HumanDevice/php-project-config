@@ -2,8 +2,8 @@
 
 ## Spis treści
 
-1. [Środowisko konfigurowanego systemu](#środowisko-konfigurowanego-systemu)
-2. [Konfiguracja środowisko](#konfiguracja-srodowiska)
+1. [Środowisko konfigurowanego systemu](#Środowisko-konfigurowanego-systemu)
+2. [Konfiguracja środowiska](#Konfiguracja-środowiska)
 
 ## Środowisko konfigurowanego systemu
 
