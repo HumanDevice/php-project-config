@@ -65,6 +65,14 @@
   sudo apt install php libapache2-mod-php php-cli php-mcrypt php-curl php-intl php-dom php-mysql php-mysqli php-mbstring php-xml php-simplexml php-gd php-xdebug php-memcached
   ```
 
+7. Zmiany w konfiguracji PHP.
+
+  * Otwórz plik: `/etc/php/7.0/apache2/php.ini`
+  * Zmienić poniższe linijki:
+    * Na serwerze produkcyjnym ustawić: `expose_php = Off`
+    * Zwiększenie pamięci operacyjnem dostępenej dla PHP: `memory_limit = 1024M`
+    * Zwiększ maksymalną wielkość wysyłanych plików: `upload_max_filesize = 64M`
+
 7. Uruchomienie modułów apache.
 
   ```
