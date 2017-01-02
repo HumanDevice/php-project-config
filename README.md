@@ -5,6 +5,9 @@
 1. [Środowisko konfigurowanego systemu](#Środowisko-konfigurowanego-systemu)
 2. [Konfiguracja środowiska](#Konfiguracja-środowiska)
 
+  1. [Linux](Linux)
+  2. [Windows](Windows)
+
 ## Środowisko konfigurowanego systemu
 
 1. Linux Mint 18.1 x64
@@ -42,6 +45,12 @@
   sudo apt install mysql-server
   ```
 
+5. Instalacja memcached.
+
+  ```
+  sudo apt install memcached
+  ```
+
 5. Podczas instalacji mysql-server w konsoli pojawi się okienko konfiguracji hasła dla użytkownika root:
 
   ![alt text](window_mysql_password.png)
@@ -53,7 +62,7 @@
 6. Instalacja PHP wraz z listą modułów.
 
   ```
-  sudo apt install php libapache2-mod-php php-cli php-mcrypt php-curl php-intl php-dom php-mysql php-mysqli php-mbstring php-xml php-simplexml php-gd php-xdebug
+  sudo apt install php libapache2-mod-php php-cli php-mcrypt php-curl php-intl php-dom php-mysql php-mysqli php-mbstring php-xml php-simplexml php-gd php-xdebug php-memcached
   ```
 
 7. Uruchomienie modułów apache.
@@ -90,7 +99,7 @@
   ```
   Źródło: [getcomposer.org/download/](https://getcomposer.org/download/)
 
-9. Dodanie aplikacji globalnych użytkownika zainstalowanych w kompoterze do listy ścieżek systemowych.
+11. Dodanie aplikacji globalnych użytkownika zainstalowanych w kompoterze do listy ścieżek systemowych.
   * Otwórz plik `~/.profile`
   * Dodaj na końcu poniższy kod:
   ```
@@ -100,9 +109,27 @@
   fi
   ```
 
-11. Instalacja codeception.
+12. Odśwież ustawienia profilu (Dzięki temu będziesz mógł bez ponownego logowania do systemu skorzystać z aplikacji umieszczonych w podpiętych folderach do pliku ~/.profile).
 
-12. Instalacja phpunit.
+  ```
+    source ~/.profile
+  ```
+
+13. Instalacja composer-asset-plugin, umożliwa wykorzystanie paczek z NPM i Bowera.
+
+  ```
+    composer global require "fxp/composer-asset-plugin:^1.2.0"
+  ```
+  Plugin jesy wymagany przez framework Yii2.
+
+  Źródło: [yiiframework.com/download](http://www.yiiframework.com/download/)
+
+14. Instalacja codeception (w tym phpunit).
+
+  ```
+    composer global require --dev "codeception/codeception:*" "codeception/specify:*" "codeception/verify:*"
+  ```
+  Żródło: [codeception.com/quickstart](http://codeception.com/quickstart)
 
 ## Windows
 
