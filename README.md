@@ -118,11 +118,17 @@
 
 8. Skonfigurowanie katalogu `www` z uprawnieniami grupy `www-data` wewnątrz katalogu użytkownika.
 
-  * TODO
+  1. Przejdź do katalogu `~/` i utwórz katalog `www`, a następnie nadaj uprawnienia grupy `www-data`.
+  ```
+    cd ~/
+    mkdir wwww
+    chgrp www-data www
+  ```
 
 7. Instalacja wtyczki do Xdebuga w przeglądarce.
 
-  * TODO
+  Zainstaluj rozszerzenie do chroma z poniższego linku.
+  [Xdebug helper](https://chrome.google.com/webstore/detail/xdebug-helper/eadndfjplgieldjbigjakmdgkmoaaaoc?utm_source=chrome-app-launcher-info-dialog)
 
 7. Uruchomienie modułów apache.
 
@@ -241,7 +247,7 @@
 
   * TODO
 
-18. 
+18.
 
 ## Windows
 
