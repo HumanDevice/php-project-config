@@ -39,10 +39,29 @@
   sudo apt install apache2
   ```
 
+  Aby zweryfikować poprawność instlacji wywołaj:
+
+  ```
+    apache2 -v
+  ```
+
+  Powinna zostać wyświetlona analogiczna treść:
+
+  ```
+    Server version: Apache/2.4.18 (Ubuntu)
+    Server built:   2016-07-14T12:32:26
+  ```
+
 4. Instalacja serwera baz danych MySQL.
 
   ```
   sudo apt install mysql-server
+  ```
+
+  Aby zweryfikować poprawność instlacji wywołaj:
+
+  ```
+
   ```
 
 5. Instalacja memcached.
@@ -163,10 +182,22 @@
   ```
     cat << EOF > selenium-server
     #!/bin/bash
-    java -jar selenium-server.jar
+    java -jar ~/bin/selenium-server.jar
     EOF
     chmod 755 selenium-server
   ```
+
+16. Instalacja Webdriver.
+
+  1. Pobierz i zainstaluj Google Chrome (nie chromium-browser!).
+
+  [Google Chrome download](https://www.google.com/chrome/browser/desktop/index.html)
+
+  2. Pobierz i rozpakuj chromeserver do katalogu `~/bin`.
+
+  [sites.google.com/a/chromium.org/chromedriver/downloads](https://sites.google.com/a/chromium.org/chromedriver/downloads)
+
+  Źródło: [github.com/SeleniumHQ/selenium/wiki/ChromeDriver](https://github.com/SeleniumHQ/selenium/wiki/ChromeDriver)
 
 16. Instalacja generatora ApiDoc.
 
