@@ -317,15 +317,50 @@
   cd ~/www/<mój_projekt>/<mój_folder_z_testami>
   ```
 
-# Uruchomienie testów jednostkowych z xdebugiem
-
-* TODO
-
 6. I uruchom testy:
 
   ```
   codecept run
   ```
+
+# Uruchomienie testów jednostkowych z xdebugiem
+
+1. Pamiętaj, że powinieneś miec dodane do composera w projekcie paczki codepception. (UWAGA: Musza być dodane dodatkowo, po za paczkami globalnymi, umożliwa to śledzenie kodu codeception wewnątrze vendora przez PhpStrom).
+  ```
+  composer require --dev "codeception/codeception:*" "codeception/specify:*" "codeception/verify:*"
+  ```
+1. Wybierz z górnego menu Run > Edit Configurations...
+2. Dodaj nową konfigurację. Opcja `+` (Alt+Insert)
+3. Wybierz z menu rozwijanego: PHP Remote Debug.
+  * Zobaczysz poniższe okno:
+  ![alt text](php_remote_debug.png)
+4. Konfiguracja PHP Remote Debug:
+  1. Ustaw pole `Name`, nazwa może być dowolna.
+  2. Wybierz w polu `Servers` swojego hosta, jeśli nie masz jeszcze przygtowane żadnego hosta kliknij na `...`.
+    1. Po wybraniu `...` pojawi się okno:
+      ![alt text](servers.png)
+    2. Aby dodać serwer klinik `+` (Insert).
+    3. Wprowadź `Name`, `Host`.
+    4. Domyślnie ustawiony powinien być port 80 i Xdebug. Jeśli wykorzystywany przypadek wymaga ustawienia innego portu lub Debuggera to należy ustawić właściwe.
+    5. Przykładowo skonfigurowany serwer:
+      ![alt text](servers.png)
+  3. W polu `Ide key(session id):` ustaw `PHPSTORM`. Klucz ten będzie wykorzystywany podczas łączenia interpretera PHP z PhpStorm.
+  4. Po skonfigurowaniu okno powinno wygląd jak poniżej:
+    ![alt text](php_remote_debug_configured.png)
+5. Z listy `Select/Run Debug Configuration` wybierz skonfigurowany PHP Remote Debug. W moim przypadku jest to `client - remote - debug`.
+6. Klinik na ikonkę żuczka, tak by pojawiła się przy nim żółta kropka. (Shift+F9).
+7. I uruchom nasłuchiwanie debuggera. Klikając na `Start Lintening for PHP Debug Connections`.
+8. Przejdź do terminala i otwórz swój folder z testami.
+9. Wywołaj polecenie:
+  ```
+  export PHP_IDE_CONFIG=serverName=wooopit.loc ; export XDEBUG_CONFIG=idekey=PHPSTORM
+  ```
+10. Ustaw breakpointy.
+11. Uruchom unit testy:
+  ```
+  codecept run unit
+  ```
+12. Debuguj!
 
 # Instalacja LAMP
 
