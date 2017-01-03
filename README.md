@@ -298,18 +298,25 @@
 1. Wymagana jest przeprowadzenie konfiguracji z punkt [Konfiguracja środowiska](#Konfiguracja-środowiska).
 2. Przygotuj terminal.
 3. Uruchom serwer selenium wywołując:
+
   ```
   selenium-server
   ```
+
 4. Otwórz kolejną kartę w terminalu i uruchom chromedriver.
+
   ```
   chromedriver
   ```
+
 5. Otwórz kolejną karte w terminalu i przejdź do folderu z testami w twoim projekcie.
+
   ```
   cd ~/www/<mój_projekt>/<mój_folder_z_testami>
   ```
+
 6. I uruchom testy:
+
   ```
   codecept run
   ```
