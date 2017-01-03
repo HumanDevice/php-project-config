@@ -201,6 +201,8 @@
   fi
   ```
 
+  * TODO `./config/composer` 
+
 12. Odśwież ustawienia profilu (Dzięki temu będziesz mógł bez ponownego logowania do systemu skorzystać z aplikacji umieszczonych w podpiętych folderach do pliku ~/.profile).
 
   ```
