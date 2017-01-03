@@ -274,9 +274,24 @@
 
   * TODO
 
-18.
-
 ## Windows
+
+# Konfiguracja IDE i Xdebuga
+
+## PhpStorm i Xdebug
+
+1. Oczywiście, należy zainstalować aplikację.
+2. Zainstaluj Xdebug, jeśli nie został już wcześniej zainstalowany podczas konfiguracji środowiska.
+
+  ```
+  sudo apt install php-xdebug
+  ```
+
+3. Zainstaluj rozszerzeni umożlwiające uruchamianie Xdebuga, do przeglądarki.
+
+  * Google Chorme / chromium: [Xdebug helper](https://chrome.google.com/webstore/detail/xdebug-helper/eadndfjplgieldjbigjakmdgkmoaaaoc?utm_source=chrome-app-launcher-info-dialog)
+
+4. 
 
 # Instalacja LAMP
 
