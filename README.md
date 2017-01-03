@@ -30,32 +30,32 @@
 2. Aktualizacja repozytoriów.
 
   ```
-    sudo apt update
+  sudo apt update
   ```
 
 3. Instalacja serwera HTTP Apache.
 
   ```
-    sudo apt install apache2
+  sudo apt install apache2
   ```
 
   Aby zweryfikować poprawność instlacji wywołaj:
 
   ```
-    apache2 -v
+  apache2 -v
   ```
 
   Powinna zostać wyświetlona analogiczna treść:
 
   ```
-    Server version: Apache/2.4.18 (Ubuntu)
-    Server built:   2016-07-14T12:32:26
+  Server version: Apache/2.4.18 (Ubuntu)
+  Server built:   2016-07-14T12:32:26
   ```
 
 4. Instalacja serwera baz danych MySQL.
 
   ```
-    sudo apt install mysql-server
+  sudo apt install mysql-server
   ```
 
   Podczas instalacji mysql-server w konsoli pojawi się okienko konfiguracji hasła dla użytkownika root:
@@ -69,25 +69,25 @@
   Aby zweryfikować poprawność instlacji wywołaj:
 
   ```
-    mysql -u root -p
+  mysql -u root -p
   ```
 
   I wprowadź swoje hasło, powinna pojawić się analogiczna treśc z uruchomiona konsolą `mysql>`
 
   ```
-    Welcome to the MySQL monitor.  Commands end with ; or \g.
-    Your MySQL connection id is 13
-    Server version: 5.7.16-0ubuntu0.16.04.1 (Ubuntu)
+  Welcome to the MySQL monitor.  Commands end with ; or \g.
+  Your MySQL connection id is 13
+  Server version: 5.7.16-0ubuntu0.16.04.1 (Ubuntu)
 
-    Copyright (c) 2000, 2016, Oracle and/or its affiliates. All rights reserved.
+  Copyright (c) 2000, 2016, Oracle and/or its affiliates. All rights reserved.
 
-    Oracle is a registered trademark of Oracle Corporation and/or its
-    affiliates. Other names may be trademarks of their respective
-    owners.
+  Oracle is a registered trademark of Oracle Corporation and/or its
+  affiliates. Other names may be trademarks of their respective
+  owners.
 
-    Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+  Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
 
-    mysql>
+  mysql>
   ```
 
   Aby zamknąc konsole mysql wpisz: `exit`
@@ -95,7 +95,7 @@
 5. Instalacja memcached.
 
   ```
-    sudo apt install memcached
+  sudo apt install memcached
   ```
 
   Źródło: [How To Install and Use Memcache on Ubuntu 14.04](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-memcache-on-ubuntu-14-04)
@@ -105,7 +105,7 @@
 6. Instalacja PHP wraz z listą modułów.
 
   ```
-    sudo apt install php libapache2-mod-php php-cli php-mcrypt php-curl php-intl php-dom php-mysql php-mysqli php-mbstring php-xml php-simplexml php-gd php-xdebug php-memcached
+  sudo apt install php libapache2-mod-php php-cli php-mcrypt php-curl php-intl php-dom php-mysql php-mysqli php-mbstring php-xml php-simplexml php-gd php-xdebug php-memcached
   ```
 
 7. Zmiany w konfiguracji PHP.
@@ -122,9 +122,9 @@
   * TODO  
 
   ```
-    cd ~/
-    mkdir wwww
-    sudo chgrp www-data www
+  cd ~/
+  mkdir wwww
+  sudo chgrp www-data www
   ```
 
   2. Utwórz katalog do przechowywania logów Apache'a.
@@ -204,13 +204,13 @@
 12. Odśwież ustawienia profilu (Dzięki temu będziesz mógł bez ponownego logowania do systemu skorzystać z aplikacji umieszczonych w podpiętych folderach do pliku ~/.profile).
 
   ```
-    source ~/.profile
+  source ~/.profile
   ```
 
 13. Instalacja composer-asset-plugin, umożliwa wykorzystanie paczek z NPM i Bowera.
 
   ```
-    composer global require "fxp/composer-asset-plugin:^1.2.0"
+  composer global require "fxp/composer-asset-plugin:^1.2.0"
   ```
   Plugin jesy wymagany przez framework Yii2.
 
@@ -219,7 +219,7 @@
 14. Instalacja codeception (w tym phpunit).
 
   ```
-    composer global require --dev "codeception/codeception:*" "codeception/specify:*" "codeception/verify:*"
+  composer global require --dev "codeception/codeception:*" "codeception/specify:*" "codeception/verify:*"
   ```
   Żródło: [codeception.com/quickstart](http://codeception.com/quickstart)
 
@@ -241,11 +241,11 @@
   3. Przenieś plik `selenium-server-standalone-x.x.x.jar` do katalogu `~/bin` i zmień jego nazwę na `selenium-server.jar`.
   4. Upewnij się, że jesteś w katalogu `~/bin` i wykonaj poniższy kod:
   ```
-    cat << EOF > selenium-server
-    #!/bin/bash
-    java -jar ~/bin/selenium-server.jar
-    EOF
-    chmod 755 selenium-server
+  cat << EOF > selenium-server
+  #!/bin/bash
+  java -jar ~/bin/selenium-server.jar
+  EOF
+  chmod 755 selenium-server
   ```
 
 16. Instalacja Webdriver.
@@ -262,8 +262,8 @@
 
   3. Nastepnie użyj poniższych poleceń:
   ```
-    chmod 755 chromedriver
-    source ~/.profile
+  chmod 755 chromedriver
+  source ~/.profile
   ```
 
 16. Instalacja generatora ApiDoc.
