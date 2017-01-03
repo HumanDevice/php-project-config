@@ -212,7 +212,7 @@
   ```
   composer global require "fxp/composer-asset-plugin:^1.2.0"
   ```
-  Plugin jesy wymagany przez framework Yii2.
+  Plugin jest wymagany przez framework Yii2.
 
   Źródło: [yiiframework.com/download](http://www.yiiframework.com/download/)
 
