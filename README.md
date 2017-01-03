@@ -201,7 +201,7 @@
   fi
   ```
 
-  * TODO `./config/composer` 
+  * TODO `./config/composer`
 
 12. Odśwież ustawienia profilu (Dzięki temu będziesz mógł bez ponownego logowania do systemu skorzystać z aplikacji umieszczonych w podpiętych folderach do pliku ~/.profile).
 
@@ -316,6 +316,10 @@
   ```
   cd ~/www/<mój_projekt>/<mój_folder_z_testami>
   ```
+
+# Uruchomienie testów jednostkowych z xdebugiem
+
+* TODO
 
 6. I uruchom testy:
 
