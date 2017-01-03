@@ -165,7 +165,7 @@
 
 8. Przygotuj folder w katalogu domowym użytkownika, zostanie on dodany do zmiennych środowiskowych użytkownnika. A w nim zostaną zainstalowane aplikacje composer oraz webdriver.
   * W moim przypadku jest to katalog `~/bin`
-  * Jeśli masz już przygotowany katalog, otwórz plik ``~/.profile` i dodaj na końcu poniższy kod:
+  * Jeśli masz już przygotowany katalog, otwórz plik `~/.profile` i dodaj na końcu poniższy kod:
   ```
   # set PATH so it includes user's private bin if it exists
   if [ -d "$HOME/bin" ] ; then
