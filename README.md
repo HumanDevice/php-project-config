@@ -123,7 +123,7 @@
 
   ```
   cd ~/
-  mkdir wwww
+  mkdir www
   sudo chgrp www-data www
   ```
 
@@ -131,7 +131,7 @@
 
   ```
   cd ~/
-  mkdir wwww
+  mkdir www
   cd ~/www
   mkdir log
   mkdir localhost
