@@ -130,22 +130,22 @@
   2. Utwórz katalog do przechowywania logów Apache'a.
 
   ```
-    cd ~/
-    mkdir wwww
-    cd ~/www
-    mkdir log
-    mkdir localhost
-    cat << EOF > ./localhost/index.php
-    #!/usr/bin/env php
-    <?php
-      phpinfo();
-    EOF
-    cd ..
-    sudo chgrp www-data -R www
-    cd /etc/apache2/sites-available
-    sudo sed -e "s@/var/www/html@$HOME/www/localhost@g" 000-default.conf
-    sudo sed -e "s@\${APACHE_LOG_DIR}@$HOME/www/log@g" 000-default.conf
-    sudo service apache2 restart
+  cd ~/
+  mkdir wwww
+  cd ~/www
+  mkdir log
+  mkdir localhost
+  cat << EOF > ./localhost/index.php
+  #!/usr/bin/env php
+  <?php
+    phpinfo();
+  EOF
+  cd ..
+  sudo chgrp www-data -R www
+  cd /etc/apache2/sites-available
+  sudo sed -e "s@/var/www/html@$HOME/www/localhost@g" 000-default.conf
+  sudo sed -e "s@\${APACHE_LOG_DIR}@$HOME/www/log@g" 000-default.conf
+  sudo service apache2 restart
   ```
 
   3. Utwórz katalog dla domeny localhost, a następnie utwórz w nim
