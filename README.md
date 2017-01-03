@@ -386,6 +386,16 @@
 
 12. Debuguj!
 
+Źródła:
+  * [Remote CLI debugging with XDebug](http://carstenwindler.de/tools/remote-cli-debugging-with-xdebug/)
+
+# Uruchomienie testów funkcyjnych i akceptacyjnych z xdebugiem
+
+* TODO
+
+Źrodła:
+  * [Debug your Codeception tests with Xdebug and PhpStorm](http://carstenwindler.de/php/debug-your-codeception-tests-with-xdebug-and-phpstorm/)
+
 # Instalacja LAMP
 
 # Źródła
