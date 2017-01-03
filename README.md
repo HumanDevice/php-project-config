@@ -25,7 +25,7 @@
   * Warto zadbać o zaszyfrowanie folderu domowego użytkownika.
 
 
-2. Uruchom terminal i używaj
+2. Uruchom terminal, aby uruchomić w nim polecenia z kolejnych punktów.
 
 2. Aktualizacja repozytoriów.
 
@@ -118,14 +118,36 @@
 
 8. Skonfigurowanie katalogu `www` z uprawnieniami grupy `www-data` wewnątrz katalogu użytkownika.
 
-  1. Przejdź do katalogu `~/` i utwórz katalog `www`, a następnie nadaj uprawnienia grupy `www-data`.
+  1. Poniższe polecenia przechodzą do katalogu `~/` i tworzą w nim katalog `www` wraz z podkatalogami `log` oraz `localhost`. Odpowiednio w pierwszym będą przechowywane logi domen dodanych w katalogu `/etc/apache2/sites-available`, a w drugim pliki dla domeny `localhost`. Katalogi zostaną dodane do grupy www-data.
+  * TODO  
+
   ```
     cd ~/
     mkdir wwww
-    chgrp www-data www
+    sudo chgrp www-data www
   ```
 
-  * TODO
+  2. Utwórz katalog do przechowywania logów Apache'a.
+
+  ```
+    cd ~/
+    mkdir wwww
+    cd ~/www
+    mkdir log
+    mkdir localhost
+    cat << EOF > ./localhost/index.php
+    #!/usr/bin/env php
+    <?php
+      phpinfo();
+    EOF
+    cd ..
+    sudo chgrp www-data -R www
+    cd /etc/apache2/sites-available
+    sudo sed -e "s@/var/www/html@$HOME/www/localhost@g" 000-default.conf
+    sudo service apache2 restart
+  ```
+
+  3. Utwórz katalog dla domeny localhost, a następnie utwórz w nim
 
 9. Ustawienie
 
