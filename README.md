@@ -271,7 +271,7 @@
 17. Instalacja Facebook driver
 
     ```
-    composer global require "facebook/webdriver"
+    composer global require --dev "facebook/webdriver"
     ```
 
     * TODO w projekcie też trzeba zaciągnać facebook/webdriver
