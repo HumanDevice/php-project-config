@@ -268,6 +268,14 @@
   source ~/.profile
   ```
 
+17. Instalacja Facebook driver
+
+    ```
+    composer global require --dev "facebook/webdriver"
+    ```
+
+    * TODO w projekcie też trzeba zaciągnać facebook/webdriver
+
 16. Instalacja generatora ApiDoc.
 
   * TODO
@@ -389,7 +397,7 @@
 Źródła:
   * [Remote CLI debugging with XDebug](http://carstenwindler.de/tools/remote-cli-debugging-with-xdebug/)
 
-# Uruchomienie testów funkcyjnych i akceptacyjnych z xdebugiem
+# Uruchomienie testów funkcjonalnych i akceptacyjnych z xdebugiem
 
 * TODO
 
