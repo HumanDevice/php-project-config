@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# U must run as sudo
+
 php_expose_php=Off
 php_memory_limit=1024M
 php_post_max_size=128M
